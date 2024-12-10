@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow access to all room-related collections
+    match /rooms/{roomId} {
+      allow read, write: if true;
+      
+      // Allow access to all subcollections
+      match /{collection}/{document=**} {
+        allow read, write: if true;
+      }
+      
+      match /peers/{peerId} {
+        allow read, write: if true;
+      }
+    }
+  }
+} 

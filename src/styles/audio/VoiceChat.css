@@ -1,0 +1,156 @@
+.voice-chat {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  width: 280px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  transform-origin: bottom right;
+}
+
+.voice-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 8px;
+}
+
+.voice-chat-header .mic-controls {
+  margin-left: auto;
+}
+
+.voice-chat .status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.voice-chat .status-indicator.connected {
+  background: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.voice-chat .status-indicator.disconnected {
+  background: #f44336;
+  box-shadow: 0 0 8px rgba(244, 67, 54, 0.5);
+}
+
+.voice-chat .status-indicator.connecting {
+  background: #ffc107;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+  animation: pulse 1s infinite;
+}
+
+.voice-chat .status-indicator.error {
+  background: #f44336;
+  box-shadow: 0 0 8px rgba(244, 67, 54, 0.5);
+  animation: error-pulse 1s infinite;
+}
+
+.voice-chat .status-indicator.speaking {
+  background: #2196f3;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+  animation: pulse 0.5s infinite;
+}
+
+.voice-chat .error-message {
+  color: #f44336;
+  font-size: 12px;
+  padding: 4px 8px;
+  background: rgba(244, 67, 54, 0.1);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.remote-players {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.remote-players::-webkit-scrollbar {
+  width: 4px;
+}
+
+.remote-players::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.remote-players::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.remote-player {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+  will-change: transform;
+}
+
+.remote-player:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.volume-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  transform-origin: left;
+}
+
+.volume-level {
+  height: 100%;
+  background: #4caf50;
+  border-radius: 2px;
+  transform-origin: left;
+  will-change: transform, opacity;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes error-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+    box-shadow: 0 0 16px rgba(244, 67, 54, 0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

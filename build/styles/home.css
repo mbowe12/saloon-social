@@ -1,0 +1,65 @@
+h1 {
+  font-size: 14rem;
+  line-height: 0.2;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  max-width: 600px;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.hero {
+  background-color: #efaf25;
+  overflow: hidden;
+}
+
+.hero h1 {
+  margin-top: 0px;
+  margin-bottom: 12rem;
+}
+
+.hero-button {
+  font-family: "BioRhyme", serif;
+  background-color: #501b13;
+  color: white;
+  border: none;
+  padding: 30px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.hero-button:hover {
+  background-color: #c55837;
+  color: white;
+}
+
+.info {
+  background-color: #c55837;
+  color: white;
+}
+
+.info-button {
+  font-family: "BioRhyme", serif;
+  background-color: #efaf25;
+  color: black;
+  border: none;
+  padding: 30px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+}

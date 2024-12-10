@@ -1,0 +1,113 @@
+/* reset and common styles */
+
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme+Expanded&family=BioRhyme&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "BioRhyme Expanded", serif;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "BioRhyme", serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.text-cta-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.text-stack {
+  /* max-width: 800px; */
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #357abd;
+}
+
+.footer {
+  background-color: #000;
+  color: white;
+  padding-top: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer h1 {
+  z-index: -1;
+  font-size: 12rem;
+  line-height: 0;
+  margin-top: 4rem;
+  color: #efaf25;
+  text-align: center;
+  user-select: none;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-links a {
+  font-family: "BioRhyme Expanded", serif;
+  margin: 0 15px;
+  color: #efaf25;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-credit {
+  color: #efaf25;
+  font-size: 0.9em;
+}
