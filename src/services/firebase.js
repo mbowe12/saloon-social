@@ -1,15 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// for development, we'll use the hardcoded values
-// in production, these values are set in the Firebase Console
+// use environment variables for sensitive configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAGLZyU0Ke4DPuzetUjj23cwHtqD97dg2Y",
-  authDomain: "saloon-social-xyz.firebaseapp.com",
-  projectId: "saloon-social-xyz",
-  storageBucket: "saloon-social-xyz.firebasestorage.app",
-  messagingSenderId: "764507844675",
-  appId: "1:764507844675:web:96957c8ac48b37d15964f6",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 // initialize firebase
